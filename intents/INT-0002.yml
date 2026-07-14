@@ -1,0 +1,9 @@
+uid: INT-0002
+type: intent
+status: approved
+title: Everyone who needs the service can use it and succeed
+text: Everyone who needs the service can reach it and succeed with it — across every channel,
+  and regardless of ability, circumstances, digital skills or internet access.
+normative: false
+attrs:
+  source_ref: GDS Service Standard — inclusive and usable

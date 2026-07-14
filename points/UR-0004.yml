@@ -5,7 +5,7 @@ title: Make the service simple to use
 text: Build a service that is simple, intuitive and comprehensible, and test it with users
   to make sure it works for them.
 links:
-- target: INT-0001
+- target: INT-0002
   type: derives_from
 attrs:
   source_ref: Point 4

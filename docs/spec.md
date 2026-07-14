@@ -15,17 +15,26 @@ point. The published point number lives in `attrs.source_ref` (e.g. `Point 5`); 
 throughline UIDs are this source's own and immutable — a consumer cites a point as
 `gds:UR-0005`, never by its point number.
 
-## Purpose
+## Why this source is shaped the way it is
+
+The Service Standard publishes its 14 points as a flat list with no grouping above
+them. The five value-intents below (`INT-0001`…`INT-0005`) are **this source's own
+choice** — an authored distillation of the distinct purposes the Standard encodes,
+not part of the published Standard. Each point `derives_from` the single value it
+primarily serves, giving the graph a "why" layer that `tl trace` can walk. See the
+README for the rationale and the point-to-value mapping.
+
+## Services are led by real user needs, not assumptions
 
 <!-- tl:item INT-0001 -->
-**INT-0001 — Public services meet real user needs and are good enough to be trusted** — `intent`, status `approved`
+**INT-0001 — Services are led by real user needs, not assumptions** — `intent`, status `approved`
 
-> The GDS Service Standard exists so that public services are built around real user needs, are simple and accessible for everyone, and are delivered and run well enough to be trusted — giving teams a shared, assessable baseline for what a good public service looks like rather than ad-hoc judgement.
+> Government services start from a real, evidenced user need — understood in the user's whole context — rather than from an assumption, a policy artefact, or a pre-chosen technology.
 
-**source_ref**: GDS Service Standard
+**source_ref**: GDS Service Standard — user-led
 <!-- tl:end -->
 
-## Point 1. Understand users and their needs
+### Point 1. Understand users and their needs
 
 <!-- tl:item UR-0001 -->
 **UR-0001 — Understand users and their needs** — `user_requirement`, status `approved`
@@ -43,7 +52,7 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0003 | system_requirement | approved | Use web analytics and other available data (such as call-centre dat... |
 <!-- tl:end -->
 
-## Point 2. Solve a whole problem for users
+### Point 2. Solve a whole problem for users
 
 <!-- tl:item UR-0002 -->
 **UR-0002 — Solve a whole problem for users** — `user_requirement`, status `approved`
@@ -66,7 +75,17 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0011 | system_requirement | approved | Minimise the number of times users have to provide the same informa... |
 <!-- tl:end -->
 
-## Point 3. Provide a joined-up experience across all channels
+## Everyone who needs the service can use it and succeed
+
+<!-- tl:item INT-0002 -->
+**INT-0002 — Everyone who needs the service can use it and succeed** — `intent`, status `approved`
+
+> Everyone who needs the service can reach it and succeed with it — across every channel, and regardless of ability, circumstances, digital skills or internet access.
+
+**source_ref**: GDS Service Standard — inclusive and usable
+<!-- tl:end -->
+
+### Point 3. Provide a joined-up experience across all channels
 
 <!-- tl:item UR-0003 -->
 **UR-0003 — Provide a joined-up experience across all channels** — `user_requirement`, status `approved`
@@ -85,7 +104,7 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0015 | system_requirement | approved | Ensure operations staff understand the digital service and are kept... |
 <!-- tl:end -->
 
-## Point 4. Make the service simple to use
+### Point 4. Make the service simple to use
 
 <!-- tl:item UR-0004 -->
 **UR-0004 — Make the service simple to use** — `user_requirement`, status `approved`
@@ -104,7 +123,7 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0019 | system_requirement | approved | Design the service to work online across the range of devices that... |
 <!-- tl:end -->
 
-## Point 5. Make sure everyone can use the service
+### Point 5. Make sure everyone can use the service
 
 <!-- tl:item UR-0005 -->
 **UR-0005 — Make sure everyone can use the service** — `user_requirement`, status `approved`
@@ -123,7 +142,17 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0023 | system_requirement | approved | Provide appropriate assisted digital support so people are not excl... |
 <!-- tl:end -->
 
-## Point 6. Have a multidisciplinary team
+## Empowered teams keep learning and improving in production
+
+<!-- tl:item INT-0003 -->
+**INT-0003 — Empowered teams keep learning and improving in production** — `intent`, status `approved`
+
+> Empowered, multidisciplinary teams keep learning from real use and improving the service in production, so it tracks what is actually true and the risk of building the wrong thing falls.
+
+**source_ref**: GDS Service Standard — adaptive delivery
+<!-- tl:end -->
+
+### Point 6. Have a multidisciplinary team
 
 <!-- tl:item UR-0006 -->
 **UR-0006 — Have a multidisciplinary team** — `user_requirement`, status `approved`
@@ -142,7 +171,7 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0027 | system_requirement | approved | Where the team works with contractors and outside suppliers, do so... |
 <!-- tl:end -->
 
-## Point 7. Use agile ways of working
+### Point 7. Use agile ways of working
 
 <!-- tl:item UR-0007 -->
 **UR-0007 — Use agile ways of working** — `user_requirement`, status `approved`
@@ -160,7 +189,7 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0030 | system_requirement | approved | Where appropriate and proportionate, test the service with the mini... |
 <!-- tl:end -->
 
-## Point 8. Iterate and improve frequently
+### Point 8. Iterate and improve frequently
 
 <!-- tl:item UR-0008 -->
 **UR-0008 — Iterate and improve frequently** — `user_requirement`, status `approved`
@@ -176,7 +205,17 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0031 | system_requirement | approved | Retain the capacity, resources and technical flexibility to make su... |
 <!-- tl:end -->
 
-## Point 9. Create a secure service which protects users' privacy
+## The service is trustworthy — secure, private and reliable
+
+<!-- tl:item INT-0004 -->
+**INT-0004 — The service is trustworthy — secure, private and reliable** — `intent`, status `approved`
+
+> People can rely on the service — it is secure, it protects their privacy, and it stays available when they need it.
+
+**source_ref**: GDS Service Standard — trustworthy
+<!-- tl:end -->
+
+### Point 9. Create a secure service which protects users' privacy
 
 <!-- tl:item UR-0009 -->
 **UR-0009 — Create a secure service which protects users' privacy** — `user_requirement`, status `approved`
@@ -199,7 +238,39 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0039 | system_requirement | approved | Anticipate and manage vulnerabilities and regularly test security c... |
 <!-- tl:end -->
 
-## Point 10. Define what success looks like and publish performance data
+### Point 14. Operate a reliable service
+
+<!-- tl:item UR-0014 -->
+**UR-0014 — Operate a reliable service** — `user_requirement`, status `approved`
+
+> Minimise service downtime and have a plan to deal with it when it does happen, so the service is dependable for the people who rely on it.
+
+**source_ref**: Point 14
+<!-- tl:end -->
+
+<!-- tl:table type == 'system_requirement' and attrs.get('source_ref') == 'Point 14' -->
+| UID | Type | Status | Title |
+|---|---|---|---|
+| SR-0056 | system_requirement | approved | Maximise the uptime and responsiveness of the online part of the se... |
+| SR-0057 | system_requirement | approved | Deploy software changes frequently without significant downtime |
+| SR-0058 | system_requirement | approved | Carry out regular quality-assurance testing overseen by the service... |
+| SR-0059 | system_requirement | approved | Test the service in an environment that matches live conditions |
+| SR-0060 | system_requirement | approved | Put proportionate, sustainable monitoring and incident response in... |
+| SR-0061 | system_requirement | approved | Monitor user outcomes and ethical issues such as bias, not only tec... |
+| SR-0062 | system_requirement | approved | Work actively to resolve organisational or contractual barriers to... |
+<!-- tl:end -->
+
+## Public money is spent accountably and services stay open
+
+<!-- tl:item INT-0005 -->
+**INT-0005 — Public money is spent accountably and services stay open** — `intent`, status `approved`
+
+> Public money is spent transparently and sustainably — success is measured and published, technology stays flexible and reusable, and code is open by default.
+
+**source_ref**: GDS Service Standard — accountable and open
+<!-- tl:end -->
+
+### Point 10. Define what success looks like and publish performance data
 
 <!-- tl:item UR-0010 -->
 **UR-0010 — Define what success looks like and publish performance data** — `user_requirement`, status `approved`
@@ -217,7 +288,7 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0042 | system_requirement | approved | For central government services, publish data on the mandatory key... |
 <!-- tl:end -->
 
-## Point 11. Choose the right tools and technology
+### Point 11. Choose the right tools and technology
 
 <!-- tl:item UR-0011 -->
 **UR-0011 — Choose the right tools and technology** — `user_requirement`, status `approved`
@@ -238,7 +309,7 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0048 | system_requirement | approved | Assess how technology choices affect user experience and accessibil... |
 <!-- tl:end -->
 
-## Point 12. Make new source code open
+### Point 12. Make new source code open
 
 <!-- tl:item UR-0012 -->
 **UR-0012 — Make new source code open** — `user_requirement`, status `approved`
@@ -256,7 +327,7 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0051 | system_requirement | approved | Recognise the limited exceptions (such as code tied to an unannounc... |
 <!-- tl:end -->
 
-## Point 13. Use and contribute to open standards, common components and patterns
+### Point 13. Use and contribute to open standards, common components and patterns
 
 <!-- tl:item UR-0013 -->
 **UR-0013 — Use and contribute to open standards, common components and patterns** — `user_requirement`, status `approved`
@@ -273,26 +344,4 @@ throughline UIDs are this source's own and immutable — a consumer cites a poin
 | SR-0053 | system_requirement | approved | Use standard government technology components where possible |
 | SR-0054 | system_requirement | approved | Maximise flexibility in the use of technology, for example by using... |
 | SR-0055 | system_requirement | approved | Use common components and patterns and share any new ones created o... |
-<!-- tl:end -->
-
-## Point 14. Operate a reliable service
-
-<!-- tl:item UR-0014 -->
-**UR-0014 — Operate a reliable service** — `user_requirement`, status `approved`
-
-> Minimise service downtime and have a plan to deal with it when it does happen, so the service is dependable for the people who rely on it.
-
-**source_ref**: Point 14
-<!-- tl:end -->
-
-<!-- tl:table type == 'system_requirement' and attrs.get('source_ref') == 'Point 14' -->
-| UID | Type | Status | Title |
-|---|---|---|---|
-| SR-0056 | system_requirement | approved | Maximise the uptime and responsiveness of the online part of the se... |
-| SR-0057 | system_requirement | approved | Deploy software changes frequently without significant downtime |
-| SR-0058 | system_requirement | approved | Carry out regular quality-assurance testing overseen by the service... |
-| SR-0059 | system_requirement | approved | Test the service in an environment that matches live conditions |
-| SR-0060 | system_requirement | approved | Put proportionate, sustainable monitoring and incident response in... |
-| SR-0061 | system_requirement | approved | Monitor user outcomes and ethical issues such as bias, not only tec... |
-| SR-0062 | system_requirement | approved | Work actively to resolve organisational or contractual barriers to... |
 <!-- tl:end -->

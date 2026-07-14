@@ -5,7 +5,7 @@ title: Iterate and improve frequently
 text: Make sure the service has the capacity, resources and technical flexibility to iterate
   and improve frequently — not just in early development but throughout the life of the service.
 links:
-- target: INT-0001
+- target: INT-0003
   type: derives_from
 attrs:
   source_ref: Point 8

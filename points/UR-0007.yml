@@ -6,7 +6,7 @@ text: Use agile methods to get the service in front of real users as soon as pos
   how they use it and iterating based on what is learned, reducing the risk of delivering
   the wrong thing.
 links:
-- target: INT-0001
+- target: INT-0003
   type: derives_from
 attrs:
   source_ref: Point 7

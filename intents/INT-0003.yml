@@ -1,0 +1,10 @@
+uid: INT-0003
+type: intent
+status: approved
+title: Empowered teams keep learning and improving in production
+text: Empowered, multidisciplinary teams keep learning from real use and improving the service
+  in production, so it tracks what is actually true and the risk of building the wrong thing
+  falls.
+normative: false
+attrs:
+  source_ref: GDS Service Standard — adaptive delivery

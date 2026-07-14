@@ -5,7 +5,7 @@ title: Choose the right tools and technology
 text: Choose tools and technology that let the team create a high-quality service in a cost-effective
   way, minimising the cost of changing direction in future.
 links:
-- target: INT-0001
+- target: INT-0005
   type: derives_from
 attrs:
   source_ref: Point 11

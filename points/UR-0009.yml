@@ -5,7 +5,7 @@ title: Create a secure service which protects users' privacy
 text: Understand how to manage risks throughout the delivery lifecycle and put robust security
   measures in place to protect against potential threats while respecting users' privacy.
 links:
-- target: INT-0001
+- target: INT-0004
   type: derives_from
 attrs:
   source_ref: Point 9

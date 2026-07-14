@@ -6,7 +6,7 @@ text: Because public services are built with public money, make the source code 
   unless there is a good reason not to — avoiding vendor lock-in and enabling reuse across
   government.
 links:
-- target: INT-0001
+- target: INT-0005
   type: derives_from
 attrs:
   source_ref: Point 12

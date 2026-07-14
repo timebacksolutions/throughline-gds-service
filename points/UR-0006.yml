@@ -6,7 +6,7 @@ text: Put together a multidisciplinary team with a diverse mix of skills and exp
   the people involved in decision making, so the team is accountable and can respond quickly
   to what it learns about users.
 links:
-- target: INT-0001
+- target: INT-0003
   type: derives_from
 attrs:
   source_ref: Point 6

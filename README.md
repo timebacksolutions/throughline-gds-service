@@ -15,13 +15,37 @@ its points as `gds:UR-0005` or its assessment expectations as `gds:SR-0021`.
 
 ## Structure
 
-- `INT-0001` — the root intent (why the Service Standard exists), `normative: false`.
-- The **14 points** as `user_requirement`s that `derives_from` the intent
-  (`UR-0001`…`UR-0014`), each carrying its point number in `attrs.source_ref`
-  (`"Point 5"`).
+- **Five value-intents** (`INT-0001`…`INT-0005`) as sibling roots, each
+  `normative: false` — a "why" layer above the points.
+- The **14 points** as `user_requirement`s that each `derives_from` the one value
+  they primarily serve (`UR-0001`…`UR-0014`), each carrying its point number in
+  `attrs.source_ref` (`"Point 5"`).
 - The concrete **assessment expectations** drawn from each point's guidance as
   `system_requirement`s that `implements` their point UR, carrying the same point
   number in `attrs.source_ref`.
+
+### The five value-intents are *our* choice, not the published Standard
+
+The GDS Service Standard publishes its **14 points as a flat list** — it defines no
+grouping or "why" layer above them. The five value-intents in `intents/` are **this
+source's own modelling decision**: an authored distillation of the distinct purposes
+the Standard encodes, added so the graph has a root layer that `tl trace`/`tl blast`
+can walk. They are not part of the official Standard and carry no point number; each
+one's `attrs.source_ref` is tagged `"GDS Service Standard — <theme>"` to make its
+authored, non-canonical status explicit. If you only trust the published text, read
+the points (`UR-*`) and expectations (`SR-*`); the intents are our editorial scaffolding.
+
+We deliberately ground each point to a **single** value (single-parent grounding).
+Genuine cross-cuts are expressed with non-grounding `relates` links rather than a
+second parent, so tracing stays unambiguous. The point-to-value mapping:
+
+| Value-intent | Points |
+| --- | --- |
+| `INT-0001` Services are led by real user needs | 1, 2 |
+| `INT-0002` Everyone can use it and succeed | 3, 4, 5 |
+| `INT-0003` Empowered teams keep improving in production | 6, 7, 8 |
+| `INT-0004` The service is trustworthy | 9, 14 |
+| `INT-0005` Public money spent accountably; services stay open | 10, 11, 12, 13 |
 
 ## Modelling conventions
 

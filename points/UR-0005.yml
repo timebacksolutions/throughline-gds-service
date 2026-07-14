@@ -6,7 +6,7 @@ text: Provide a service that everyone can use, including disabled people and peo
   legally protected characteristics, and people who do not have access to the internet or
   lack the skills or confidence to use it.
 links:
-- target: INT-0001
+- target: INT-0002
   type: derives_from
 attrs:
   source_ref: Point 5

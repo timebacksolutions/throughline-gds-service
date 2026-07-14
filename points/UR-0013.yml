@@ -5,7 +5,7 @@ title: Use and contribute to open standards, common components and patterns
 text: Build on open standards and common components and patterns from inside and outside government,
   and contribute back what the team creates.
 links:
-- target: INT-0001
+- target: INT-0005
   type: derives_from
 attrs:
   source_ref: Point 13

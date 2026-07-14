@@ -3,10 +3,12 @@
 
 Faithfully re-expresses the 14 points of the UK Government Digital Service (GDS)
 Service Standard (https://www.gov.uk/service-manual/service-standard) as a grounded
-IDD graph:
+IDD graph. MULTI-ROOT: the Standard publishes no grouping above its 14 points, so
+this source distils five value-intents of its own (an authored, non-normative "why"
+layer) and grounds each point to the one value it primarily serves:
 
-    INT-0001  (root intent, why the Service Standard exists; normative: false)
-      -> UR-0001..UR-0014   one user_requirement per point (derives_from intent)
+    INT-0001..INT-0005  (five value-intents, sibling roots; normative: false)
+      -> UR-0001..UR-0014   one user_requirement per point (derives_from a value)
            -> SR-000N        assessment expectations (implements the point UR)
 
 UIDs are this source's own and immutable; the published point number lives in
@@ -24,18 +26,74 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
-INTENT = dict(
-    uid="INT-0001",
-    title="Public services meet real user needs and are good enough to be trusted",
-    text=(
-        "The GDS Service Standard exists so that public services are built around "
-        "real user needs, are simple and accessible for everyone, and are delivered "
-        "and run well enough to be trusted — giving teams a shared, assessable "
-        "baseline for what a good public service looks like rather than ad-hoc "
-        "judgement."
+# The "why" layer. The Service Standard publishes no grouping above its 14 points,
+# so these five value-intents are this source's own distillation of the distinct
+# purposes the Standard encodes — authored, non-normative roots (which is exactly
+# what IDD roots are for). MULTI-ROOT, matching the family shape of standard-wcag
+# (4 principles), standard-nist-ai-rmf (4 Functions) and standard-slsa (2 tracks):
+# each point derives_from the single value it primarily serves.
+VALUES = [
+    dict(
+        uid="INT-0001",
+        title="Services are led by real user needs, not assumptions",
+        text=(
+            "Government services start from a real, evidenced user need — understood "
+            "in the user's whole context — rather than from an assumption, a policy "
+            "artefact, or a pre-chosen technology."
+        ),
+        source_ref="GDS Service Standard — user-led",
     ),
-    source_ref="GDS Service Standard",
-)
+    dict(
+        uid="INT-0002",
+        title="Everyone who needs the service can use it and succeed",
+        text=(
+            "Everyone who needs the service can reach it and succeed with it — across "
+            "every channel, and regardless of ability, circumstances, digital skills "
+            "or internet access."
+        ),
+        source_ref="GDS Service Standard — inclusive and usable",
+    ),
+    dict(
+        uid="INT-0003",
+        title="Empowered teams keep learning and improving in production",
+        text=(
+            "Empowered, multidisciplinary teams keep learning from real use and "
+            "improving the service in production, so it tracks what is actually true "
+            "and the risk of building the wrong thing falls."
+        ),
+        source_ref="GDS Service Standard — adaptive delivery",
+    ),
+    dict(
+        uid="INT-0004",
+        title="The service is trustworthy — secure, private and reliable",
+        text=(
+            "People can rely on the service — it is secure, it protects their "
+            "privacy, and it stays available when they need it."
+        ),
+        source_ref="GDS Service Standard — trustworthy",
+    ),
+    dict(
+        uid="INT-0005",
+        title="Public money is spent accountably and services stay open",
+        text=(
+            "Public money is spent transparently and sustainably — success is "
+            "measured and published, technology stays flexible and reusable, and code "
+            "is open by default."
+        ),
+        source_ref="GDS Service Standard — accountable and open",
+    ),
+]
+
+# Which value-intent each of the 14 points primarily serves (single-parent grounding
+# — genuine cross-cuts, if ever wanted, go on a non-grounding `relates` link, never a
+# second parent, so `tl trace`/`tl blast` stay crisp). Indexed by point number 1..14.
+POINT_TO_VALUE = {
+    1: "INT-0001", 2: "INT-0001",                      # user-led
+    3: "INT-0002", 4: "INT-0002", 5: "INT-0002",       # inclusive and usable
+    6: "INT-0003", 7: "INT-0003", 8: "INT-0003",       # adaptive delivery
+    9: "INT-0004", 14: "INT-0004",                     # trustworthy
+    10: "INT-0005", 11: "INT-0005", 12: "INT-0005", 13: "INT-0005",  # accountable/open
+}
 
 # Each point: (title, expectation text, [assessment expectation SR texts])
 POINTS = [
@@ -290,17 +348,18 @@ def _dump(path: pathlib.Path, item: "dict[str, object]") -> None:
 
 
 def main() -> None:
-    # Root intent.
-    intent = dict(
-        uid=INTENT["uid"],
-        type="intent",
-        status="approved",
-        title=INTENT["title"],
-        text=INTENT["text"],
-        normative=False,
-        attrs=dict(source_ref=INTENT["source_ref"]),
-    )
-    _dump(ROOT / "intents" / f"{INTENT['uid']}.yml", intent)
+    # The five value-intents (MULTI-ROOT). Each is a non-normative root of its own.
+    for value in VALUES:
+        intent = dict(
+            uid=value["uid"],
+            type="intent",
+            status="approved",
+            title=value["title"],
+            text=value["text"],
+            normative=False,
+            attrs=dict(source_ref=value["source_ref"]),
+        )
+        _dump(ROOT / "intents" / f"{value['uid']}.yml", intent)
 
     sr_n = 0
     for idx, (title, text, criteria) in enumerate(POINTS, start=1):
@@ -312,7 +371,7 @@ def main() -> None:
             status="approved",
             title=title,
             text=text,
-            links=[dict(target=INTENT["uid"], type="derives_from")],
+            links=[dict(target=POINT_TO_VALUE[idx], type="derives_from")],
             attrs=dict(source_ref=point_ref),
         )
         _dump(ROOT / "points" / f"{ur_uid}.yml", ur)
@@ -337,7 +396,10 @@ def main() -> None:
 
     _write_spec()
 
-    print(f"wrote INT-0001, 14 point URs, {sr_n} assessment SRs, docs/spec.md skeleton")
+    print(
+        f"wrote {len(VALUES)} value-intents, 14 point URs, {sr_n} assessment SRs, "
+        "docs/spec.md skeleton"
+    )
 
 
 def _write_spec() -> None:
@@ -363,19 +425,31 @@ def _write_spec() -> None:
         "`Point 5`); the\nthroughline UIDs are this source's own and immutable — a "
         "consumer cites a point as\n`gds:UR-0005`, never by its point number.\n"
     )
-    lines.append("## Purpose\n")
+    lines.append("## Why this source is shaped the way it is\n")
     lines.append(
-        "<!-- tl:item INT-0001 -->\n<!-- tl:end -->\n"
+        "The Service Standard publishes its 14 points as a flat list with no grouping "
+        "above\nthem. The five value-intents below (`INT-0001`…`INT-0005`) are **this "
+        "source's own\nchoice** — an authored distillation of the distinct purposes the "
+        "Standard encodes,\nnot part of the published Standard. Each point "
+        "`derives_from` the single value it\nprimarily serves, giving the graph a "
+        "\"why\" layer that `tl trace` can walk. See the\nREADME for the rationale and "
+        "the point-to-value mapping.\n"
     )
-    for idx, (title, _text, _criteria) in enumerate(POINTS, start=1):
-        ur_uid = f"UR-{idx:04d}"
-        point_ref = f"Point {idx}"
-        lines.append(f"## {point_ref}. {title}\n")
-        lines.append(f"<!-- tl:item {ur_uid} -->\n<!-- tl:end -->\n")
-        lines.append(
-            "<!-- tl:table type == 'system_requirement' and "
-            f"attrs.get('source_ref') == '{point_ref}' -->\n<!-- tl:end -->\n"
-        )
+    for value in VALUES:
+        vuid = value["uid"]
+        lines.append(f"## {value['title']}\n")
+        lines.append(f"<!-- tl:item {vuid} -->\n<!-- tl:end -->\n")
+        for idx, (title, _text, _criteria) in enumerate(POINTS, start=1):
+            if POINT_TO_VALUE[idx] != vuid:
+                continue
+            ur_uid = f"UR-{idx:04d}"
+            point_ref = f"Point {idx}"
+            lines.append(f"### {point_ref}. {title}\n")
+            lines.append(f"<!-- tl:item {ur_uid} -->\n<!-- tl:end -->\n")
+            lines.append(
+                "<!-- tl:table type == 'system_requirement' and "
+                f"attrs.get('source_ref') == '{point_ref}' -->\n<!-- tl:end -->\n"
+            )
     (ROOT / "docs" / "spec.md").write_text("\n".join(lines), encoding="utf-8")
 
 

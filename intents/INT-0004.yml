@@ -1,0 +1,9 @@
+uid: INT-0004
+type: intent
+status: approved
+title: The service is trustworthy — secure, private and reliable
+text: People can rely on the service — it is secure, it protects their privacy, and it stays
+  available when they need it.
+normative: false
+attrs:
+  source_ref: GDS Service Standard — trustworthy

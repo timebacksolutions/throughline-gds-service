@@ -1,0 +1,9 @@
+uid: INT-0005
+type: intent
+status: approved
+title: Public money is spent accountably and services stay open
+text: Public money is spent transparently and sustainably — success is measured and published,
+  technology stays flexible and reusable, and code is open by default.
+normative: false
+attrs:
+  source_ref: GDS Service Standard — accountable and open
