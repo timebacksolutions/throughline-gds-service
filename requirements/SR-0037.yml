@@ -1,0 +1,10 @@
+uid: SR-0037
+type: system_requirement
+status: approved
+title: Collect, process and store data securely and in a way that respects...
+text: Collect, process and store data securely and in a way that respects users' privacy.
+links:
+- target: UR-0009
+  type: implements
+attrs:
+  source_ref: Point 9

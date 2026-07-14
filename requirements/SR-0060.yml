@@ -1,0 +1,10 @@
+uid: SR-0060
+type: system_requirement
+status: approved
+title: Put proportionate, sustainable monitoring and incident response in...
+text: Put proportionate, sustainable monitoring and incident response in place.
+links:
+- target: UR-0014
+  type: implements
+attrs:
+  source_ref: Point 14

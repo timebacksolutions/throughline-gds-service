@@ -1,0 +1,12 @@
+uid: UR-0006
+type: user_requirement
+status: approved
+title: Have a multidisciplinary team
+text: Put together a multidisciplinary team with a diverse mix of skills and expertise, including
+  the people involved in decision making, so the team is accountable and can respond quickly
+  to what it learns about users.
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  source_ref: Point 6

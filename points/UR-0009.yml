@@ -1,0 +1,11 @@
+uid: UR-0009
+type: user_requirement
+status: approved
+title: Create a secure service which protects users' privacy
+text: Understand how to manage risks throughout the delivery lifecycle and put robust security
+  measures in place to protect against potential threats while respecting users' privacy.
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  source_ref: Point 9

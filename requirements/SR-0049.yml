@@ -1,0 +1,11 @@
+uid: SR-0049
+type: system_requirement
+status: approved
+title: Write code in the open from the start and publish it in open reposi...
+text: Write code in the open from the start and publish it in open repositories, excluding
+  sensitive information such as credentials and secret keys.
+links:
+- target: UR-0012
+  type: implements
+attrs:
+  source_ref: Point 12

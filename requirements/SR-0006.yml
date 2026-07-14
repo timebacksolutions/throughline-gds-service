@@ -1,0 +1,11 @@
+uid: SR-0006
+type: system_requirement
+status: approved
+title: Check whether the problem has already been solved and reuse existin...
+text: Check whether the problem has already been solved and reuse existing solutions where
+  possible.
+links:
+- target: UR-0002
+  type: implements
+attrs:
+  source_ref: Point 2

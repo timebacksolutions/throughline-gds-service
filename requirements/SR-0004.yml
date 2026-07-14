@@ -1,0 +1,11 @@
+uid: SR-0004
+type: system_requirement
+status: approved
+title: Understand any genuine constraints affecting the service (for examp...
+text: Understand any genuine constraints affecting the service (for example legislative constraints)
+  and work with policy professionals to solve the problems those constraints cause.
+links:
+- target: UR-0002
+  type: implements
+attrs:
+  source_ref: Point 2

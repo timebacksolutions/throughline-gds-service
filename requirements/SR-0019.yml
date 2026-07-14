@@ -1,0 +1,10 @@
+uid: SR-0019
+type: system_requirement
+status: approved
+title: Design the service to work online across the range of devices that...
+text: Design the service to work online across the range of devices that reflects users' behaviour.
+links:
+- target: UR-0004
+  type: implements
+attrs:
+  source_ref: Point 4

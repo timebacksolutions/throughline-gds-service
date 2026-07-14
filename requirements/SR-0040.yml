@@ -1,0 +1,11 @@
+uid: SR-0040
+type: system_requirement
+status: approved
+title: Identify metrics that show how well the service solves its intended...
+text: Identify metrics that show how well the service solves its intended problem and track
+  performance against them.
+links:
+- target: UR-0010
+  type: implements
+attrs:
+  source_ref: Point 10

@@ -1,0 +1,11 @@
+uid: SR-0007
+type: system_requirement
+status: approved
+title: Be able to explain how the service joins up with other things into...
+text: Be able to explain how the service joins up with other things into a journey that solves
+  a whole problem for users.
+links:
+- target: UR-0002
+  type: implements
+attrs:
+  source_ref: Point 2

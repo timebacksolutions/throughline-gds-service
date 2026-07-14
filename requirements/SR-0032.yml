@@ -1,0 +1,10 @@
+uid: SR-0032
+type: system_requirement
+status: approved
+title: Follow the Secure by Design principles across the delivery lifecycle
+text: Follow the Secure by Design principles across the delivery lifecycle.
+links:
+- target: UR-0009
+  type: implements
+attrs:
+  source_ref: Point 9

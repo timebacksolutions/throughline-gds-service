@@ -1,0 +1,10 @@
+uid: SR-0041
+type: system_requirement
+status: approved
+title: Use performance data to decide what to fix and how to improve the s...
+text: Use performance data to decide what to fix and how to improve the service.
+links:
+- target: UR-0010
+  type: implements
+attrs:
+  source_ref: Point 10

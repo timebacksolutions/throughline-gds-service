@@ -1,0 +1,11 @@
+uid: SR-0025
+type: system_requirement
+status: approved
+title: Include expertise in how the service is delivered across the releva...
+text: Include expertise in how the service is delivered across the relevant offline channels
+  and the back-end systems it must integrate with.
+links:
+- target: UR-0006
+  type: implements
+attrs:
+  source_ref: Point 6

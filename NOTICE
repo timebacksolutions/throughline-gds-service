@@ -1,0 +1,20 @@
+standard-gds-service
+Copyright 2026 Time Back Solutions Limited
+
+This product includes work developed by Time Back Solutions Limited.
+
+Licensed under the Apache License, Version 2.0. See the LICENSE file for the
+full terms.
+
+This repository is a throughline *source*: a requirements graph, not a program. It
+re-expresses the UK Government Digital Service (GDS) Service Standard as a grounded
+IDD graph so consuming projects can compose it with throughline-compose.
+
+The GDS Service Standard is published by the UK Government on GOV.UK and is Crown
+copyright, made available under the Open Government Licence v3.0 (OGL). The point
+titles and expectation text reproduced here in items' `text`/`attrs.source_ref` are
+derived from that guidance and remain Crown copyright; this repository claims no
+ownership over that content and reproduces it under the OGL for interoperability.
+See https://www.gov.uk/service-manual/service-standard for the authoritative source
+and https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/ for
+the licence.

@@ -1,0 +1,11 @@
+uid: SR-0017
+type: system_requirement
+status: approved
+title: Test for usability frequently with actual and potential users, usin...
+text: Test for usability frequently with actual and potential users, using appropriate research
+  techniques.
+links:
+- target: UR-0004
+  type: implements
+attrs:
+  source_ref: Point 4

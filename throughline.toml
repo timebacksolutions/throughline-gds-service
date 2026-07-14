@@ -1,0 +1,53 @@
+[project]
+name = "GDS Service Standard (throughline source)"
+format_version = 2
+
+# A throughline *source*: a standalone graph a consuming project composes via
+# throughline-compose, importing it under a namespace (e.g. `gds`) and referencing
+# points as `gds:UR-0005` or criteria as `gds:SR-0021`. The UIDs here are this
+# source's own and immutable; the published point number (e.g. "Point 5") lives in
+# `attrs.source_ref`, never in the UID.
+#
+# This is the UK Government Digital Service (GDS) Service Standard: 14 points a
+# public service is assessed against. Each point is a user_requirement grouping the
+# standard; each concrete assessment expectation is a system_requirement.
+
+[grounding]
+root_types = ["intent"]
+delivery_roots = ["intent"]
+ground_link_types = ["derives_from", "implements"]
+ai_origins = ["ai", "hybrid"]
+
+[types.user_requirement]
+attrs.source_ref = { required = true }
+
+[types.system_requirement]
+attrs.source_ref = { required = true }
+
+[links]
+types = ["derives_from", "implements", "relates"]
+
+[link_rules]
+derives_from = { from = ["user_requirement"], to = ["intent"] }
+implements   = { from = ["system_requirement"], to = ["user_requirement"] }
+
+[status]
+values = ["proposed", "draft", "deferred", "approved", "ratified", "implemented",
+          "verified", "suspect", "rejected", "deleted"]
+
+[transitions]
+proposed    = ["draft", "approved", "ratified", "deferred", "rejected", "deleted"]
+draft       = ["approved", "deferred", "rejected", "deleted"]
+deferred    = ["draft", "approved", "rejected", "deleted"]
+approved    = ["ratified", "implemented", "deferred", "suspect", "rejected", "deleted"]
+ratified    = ["implemented", "suspect", "rejected", "deleted"]
+implemented = ["verified", "suspect", "rejected", "deleted"]
+verified    = ["implemented", "suspect", "deleted"]
+suspect     = ["approved", "ratified", "implemented", "verified", "rejected", "deleted"]
+rejected    = ["draft", "deleted"]
+
+# `tl docs` regenerates docs/spec.md from the graph; `tl docs --check` gates it.
+# This activates the `unpublished` rule: every live normative item must be
+# referenced by a published document or `tl check --strict` fails.
+[docs]
+paths = ["docs/*.md"]

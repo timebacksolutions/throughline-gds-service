@@ -1,0 +1,11 @@
+uid: SR-0018
+type: system_requirement
+status: approved
+title: Test all the parts of the service the user interacts with — online...
+text: Test all the parts of the service the user interacts with — online parts and offline
+  parts such as letters.
+links:
+- target: UR-0004
+  type: implements
+attrs:
+  source_ref: Point 4

@@ -1,0 +1,11 @@
+uid: UR-0003
+type: user_requirement
+status: approved
+title: Provide a joined-up experience across all channels
+text: Work towards a service that meets users' needs across all the channels they need, which
+  could be a mix of online, phone, paper and face to face.
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  source_ref: Point 3

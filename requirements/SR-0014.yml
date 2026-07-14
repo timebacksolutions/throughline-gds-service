@@ -1,0 +1,11 @@
+uid: SR-0014
+type: system_requirement
+status: approved
+title: Be able to test and change both digital and non-digital channels, c...
+text: Be able to test and change both digital and non-digital channels, coordinating online
+  changes with their offline impacts.
+links:
+- target: UR-0003
+  type: implements
+attrs:
+  source_ref: Point 3

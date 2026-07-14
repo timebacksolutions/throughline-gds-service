@@ -1,0 +1,12 @@
+uid: UR-0005
+type: user_requirement
+status: approved
+title: Make sure everyone can use the service
+text: Provide a service that everyone can use, including disabled people and people with other
+  legally protected characteristics, and people who do not have access to the internet or
+  lack the skills or confidence to use it.
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  source_ref: Point 5

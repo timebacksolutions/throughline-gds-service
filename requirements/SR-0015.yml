@@ -1,0 +1,11 @@
+uid: SR-0015
+type: system_requirement
+status: approved
+title: Ensure operations staff understand the digital service and are kept...
+text: Ensure operations staff understand the digital service and are kept updated, and that
+  promoting digital take-up does not obscure other access channels.
+links:
+- target: UR-0003
+  type: implements
+attrs:
+  source_ref: Point 3

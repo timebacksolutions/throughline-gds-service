@@ -1,0 +1,10 @@
+uid: SR-0042
+type: system_requirement
+status: approved
+title: For central government services, publish data on the mandatory key...
+text: For central government services, publish data on the mandatory key performance indicators.
+links:
+- target: UR-0010
+  type: implements
+attrs:
+  source_ref: Point 10

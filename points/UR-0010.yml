@@ -1,0 +1,11 @@
+uid: UR-0010
+type: user_requirement
+status: approved
+title: Define what success looks like and publish performance data
+text: Work out what success looks like for the service and identify metrics that show what
+  is working and what can be improved, combined with user research.
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  source_ref: Point 10

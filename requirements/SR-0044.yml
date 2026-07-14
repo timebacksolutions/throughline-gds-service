@@ -1,0 +1,11 @@
+uid: SR-0044
+type: system_requirement
+status: approved
+title: Make and be able to justify sound build-versus-buy decisions, using...
+text: Make and be able to justify sound build-versus-buy decisions, using common platforms
+  where suitable.
+links:
+- target: UR-0011
+  type: implements
+attrs:
+  source_ref: Point 11

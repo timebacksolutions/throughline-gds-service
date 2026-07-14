@@ -1,0 +1,10 @@
+uid: SR-0035
+type: system_requirement
+status: approved
+title: Perform due diligence on the security of third-party software
+text: Perform due diligence on the security of third-party software.
+links:
+- target: UR-0009
+  type: implements
+attrs:
+  source_ref: Point 9

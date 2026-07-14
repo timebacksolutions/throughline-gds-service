@@ -1,0 +1,10 @@
+uid: SR-0059
+type: system_requirement
+status: approved
+title: Test the service in an environment that matches live conditions
+text: Test the service in an environment that matches live conditions.
+links:
+- target: UR-0014
+  type: implements
+attrs:
+  source_ref: Point 14

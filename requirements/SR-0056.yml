@@ -1,0 +1,10 @@
+uid: SR-0056
+type: system_requirement
+status: approved
+title: Maximise the uptime and responsiveness of the online part of the se...
+text: Maximise the uptime and responsiveness of the online part of the service.
+links:
+- target: UR-0014
+  type: implements
+attrs:
+  source_ref: Point 14

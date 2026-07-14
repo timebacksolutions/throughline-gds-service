@@ -1,0 +1,11 @@
+uid: INT-0001
+type: intent
+status: approved
+title: Public services meet real user needs and are good enough to be trusted
+text: The GDS Service Standard exists so that public services are built around real user needs,
+  are simple and accessible for everyone, and are delivered and run well enough to be trusted
+  — giving teams a shared, assessable baseline for what a good public service looks like rather
+  than ad-hoc judgement.
+normative: false
+attrs:
+  source_ref: GDS Service Standard

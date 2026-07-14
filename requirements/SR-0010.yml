@@ -1,0 +1,11 @@
+uid: SR-0010
+type: system_requirement
+status: approved
+title: Work in the open so people inside and outside the organisation know...
+text: Work in the open so people inside and outside the organisation know what the team is
+  doing.
+links:
+- target: UR-0002
+  type: implements
+attrs:
+  source_ref: Point 2

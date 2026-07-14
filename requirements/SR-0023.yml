@@ -1,0 +1,11 @@
+uid: SR-0023
+type: system_requirement
+status: approved
+title: Provide appropriate assisted digital support so people are not excl...
+text: Provide appropriate assisted digital support so people are not excluded for lack of
+  digital skills or internet access.
+links:
+- target: UR-0005
+  type: implements
+attrs:
+  source_ref: Point 5

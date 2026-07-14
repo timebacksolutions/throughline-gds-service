@@ -1,0 +1,10 @@
+uid: SR-0036
+type: system_requirement
+status: approved
+title: Do user research to create security processes that are fit for purp...
+text: Do user research to create security processes that are fit for purpose and easy to understand.
+links:
+- target: UR-0009
+  type: implements
+attrs:
+  source_ref: Point 9

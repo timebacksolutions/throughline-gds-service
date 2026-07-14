@@ -1,0 +1,10 @@
+uid: SR-0021
+type: system_requirement
+status: approved
+title: Avoid excluding any groups within the audience the service is inten...
+text: Avoid excluding any groups within the audience the service is intended to serve.
+links:
+- target: UR-0005
+  type: implements
+attrs:
+  source_ref: Point 5

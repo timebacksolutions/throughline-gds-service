@@ -1,0 +1,11 @@
+uid: SR-0026
+type: system_requirement
+status: approved
+title: Give the team access to the specialist expertise it needs (for exam...
+text: Give the team access to the specialist expertise it needs (for example legal, policy
+  or industry-specific analysis).
+links:
+- target: UR-0006
+  type: implements
+attrs:
+  source_ref: Point 6

@@ -1,0 +1,11 @@
+uid: SR-0058
+type: system_requirement
+status: approved
+title: Carry out regular quality-assurance testing overseen by the service...
+text: Carry out regular quality-assurance testing overseen by the service team, not by automated
+  tools alone.
+links:
+- target: UR-0014
+  type: implements
+attrs:
+  source_ref: Point 14

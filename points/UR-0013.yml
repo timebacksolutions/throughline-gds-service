@@ -1,0 +1,11 @@
+uid: UR-0013
+type: user_requirement
+status: approved
+title: Use and contribute to open standards, common components and patterns
+text: Build on open standards and common components and patterns from inside and outside government,
+  and contribute back what the team creates.
+links:
+- target: INT-0001
+  type: derives_from
+attrs:
+  source_ref: Point 13

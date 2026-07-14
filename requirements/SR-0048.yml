@@ -1,0 +1,11 @@
+uid: SR-0048
+type: system_requirement
+status: approved
+title: Assess how technology choices affect user experience and accessibil...
+text: Assess how technology choices affect user experience and accessibility, and avoid choices
+  that compromise the reliability of information or the quality of decisions.
+links:
+- target: UR-0011
+  type: implements
+attrs:
+  source_ref: Point 11

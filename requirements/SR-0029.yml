@@ -1,0 +1,11 @@
+uid: SR-0029
+type: system_requirement
+status: approved
+title: Use governance arrangements consistent with the agile governance pr...
+text: Use governance arrangements consistent with the agile governance principles, keeping
+  the right people informed at the right level of detail.
+links:
+- target: UR-0007
+  type: implements
+attrs:
+  source_ref: Point 7
