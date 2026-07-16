@@ -1,4 +1,4 @@
-# standard-gds-service
+# throughline-gds-service
 
 The **UK Government Digital Service (GDS) Service Standard** — the 14 points a public
 service is assessed against — expressed as a
@@ -61,7 +61,7 @@ In a consuming throughline project's `throughline.toml`:
 ```toml
 [[sources]]
 namespace = "gds"
-path = "vendor/standard-gds-service"   # or a pinned checkout
+path = "vendor/throughline-gds-service"   # or a pinned checkout
 ```
 
 Then reference a point or expectation from your own items:
